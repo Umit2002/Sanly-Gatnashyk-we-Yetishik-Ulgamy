@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.login2{
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    text-align: center;
+    
+
+}
+.card1{
+    margin: 15%;
+    border-radius: 15px;    
+}
+
+.loginh3{
+    margin-top: 10%;
+    margin-bottom:15% ;
+}
+
+.loginbutton{
+     width: 100%;
+     margin-top: 10%;
+     transition: transform 500ms ease;
+     
+}
+
+.loginbutton:hover{
+    transform:scale(1.05);
+}
+
+.label{
+    margin-top: 8%;
+}
+
+.login1{
+   padding-top: 180px;
+   padding-left:20px;
+   background-color: #DFEFFD;
+   
+   border-top-left-radius: 15px;
+   border-bottom-left-radius: 15px;
+}
+
+.imglogin{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .login1{
+        display: none;
+     } 
+}
+
+.Table1{
+    margin-left: 40px;
+    padding: 3%;
+   
+}
+.HeaderText{
+    text-align: center;
+}
+
+.HeaderText1{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.bggeldi{
+    background: #28A745;
+}
+.bggelmedi{
+    background: #DC3545;
+}
+#absolute{
+    position: absolute;
+}
+#boot{
+    margin-left: 30px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.home,
+.services,
+.reports,
+.contact,
+.events,
+.support{
+    display: flex;
+    margin-left: 260px;
+    font-size: 2rem;
+}
+.sideBarNav{
+    background-color: black;
+}
+
+.input{
+    border-color: blue;
+    padding: 5%;
+    width: 100%;
+}
+
+.box-1{
+    margin-top:20px ;
+    
+}
+
+.box{
+    padding: 4%;
+}
