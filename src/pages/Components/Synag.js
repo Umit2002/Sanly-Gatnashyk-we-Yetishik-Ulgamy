@@ -1,13 +1,12 @@
-import React from "react"
+import React from "react";
 
-import ColumnGroupingTable from "./Table"
+import SynagTable from "./SynagTable1";
 class Synag extends React.Component{
-    
        render(){
         return(
             <div className="container ">
                  <div>
-                    <ColumnGroupingTable/>   
+                    <SynagTable/>   
                 </div> 
             </div>
         )

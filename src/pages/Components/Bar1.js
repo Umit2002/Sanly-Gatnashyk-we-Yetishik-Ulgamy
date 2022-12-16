@@ -110,12 +110,60 @@ const Bar1 =()=>{
                      <ul className="menu">
                      <li className="menu-item">
                               <button >
-                              <Link  path="" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                              <Link  to="/Halypa/Gatnashyk1" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
                                  <div>{React.createElement(GiTeacher, {size:"20"})}</div>
                                  <h5 
                                  style={{transitionDelay:`${1+2}00ms`}}
                                  className={`whitespace-pre duration-500 
-                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Topar 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Gatnashyk 
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link  to="/Halypa/Gatnashyk" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${1+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Gatnashyk 
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link  to="/Halypa/Zurnal1" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${1+3}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Zurnal 
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link  to="/Halypa/Duydurysh" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${1+4}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Duydurysh 
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link  to="/Halypa/Temmiler" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${1+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Temmiler 
                                  </h5>
                               </Link>
                              </button>

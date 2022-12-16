@@ -8,7 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import AlertDialog from "./synagbutton";
 
-class Test extends React.Component{
+class SynagTable extends React.Component{
     constructor(props){
         super(props)
          this.state={
@@ -105,4 +105,4 @@ class Test extends React.Component{
 }
 
  
-export default Test
+export default SynagTable

@@ -15,7 +15,7 @@ class Gatnashyk extends React.Component {
          this.callAPI();
     }
     callAPI(){
-        fetch('http://192.168.12.97:8000/gelmedi/').then((response)=> response.json()
+        fetch('http://192.168.12.206:8000/gelmedi/').then((response)=> response.json()
         ).then((gelmedi)=>{
            
             console.log(gelmedi)
@@ -45,7 +45,7 @@ class Gatnashyk extends React.Component {
               <div className="HeaderText ">Group number</div>
                </div> 
                <table className="table table-striped bg-[#F8F8FA]"> 
-                   <thead>
+                   <thead> 
                     <tr>
                         <th>Order</th>
                         <th>Name</th>                     

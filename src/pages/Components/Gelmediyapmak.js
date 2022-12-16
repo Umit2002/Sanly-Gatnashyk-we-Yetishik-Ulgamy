@@ -10,7 +10,7 @@ class Otrobotka extends React.Component{
         this.callAPI();
     }
     callAPI(){
-        fetch('http://192.168.12.97:8000/verify/').then((response)=> response.json()
+        fetch('http://192.168.12.206:8000/verify/').then((response)=> response.json()
         ).then((gelmedi)=>{
            
             console.log(gelmedi)
