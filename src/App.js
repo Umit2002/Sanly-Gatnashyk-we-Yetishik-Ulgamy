@@ -10,10 +10,12 @@ import Sidebar from './pages/Components/Sidebar';
 import Synag from'./pages/Components/Synag';
 import HalypaGatnashyk from './pages/Components/HalypaGatnashyk'
 import Zurnal from './pages/Components/Zurnal1'
-import Zurnal1 from './pages/Components/Zurnal'
+
 import Duydurysh from './pages/Components/Duydurysh';
 import Temmiler from './pages/Components/Temmiler';
 import HalypaGatnashyk1 from './pages/Components/HalypaGatnashyk1';
+import MudirZuranl from './pages/Components/MudirZurnal';
+import MudirDuydurysh from './pages/Components/MudirDuydurysh';
 class App extends React.Component{
     
 
@@ -26,7 +28,8 @@ class App extends React.Component{
         <Routes>
             <Route path='/Halypa/Duydurysh' element={<Duydurysh />} />
             <Route path='/Halypa/Temmiler' element={<Temmiler />} /> 
-            <Route path='/Test' element={<Zurnal1 />} /> 
+            <Route path='/Mudir/Zurnal' element={<MudirZuranl />} /> 
+            <Route path='/Mudir/Duydurysh' element={<MudirDuydurysh />} />
             <Route path='/Halypa/Zurnal1' element={<Zurnal />} /> 
             <Route path='/Halypa/Gatnashyk1' element={<HalypaGatnashyk1 />} /> 
             <Route path='/Halypa/Gatnashyk' element={<HalypaGatnashyk />} /> 
@@ -38,7 +41,7 @@ class App extends React.Component{
             <Route path='/Bar1' element={<Bar1 />} />
         </Routes>
         </div>
-    )
+    ) 
 }
 else {
     routes = (

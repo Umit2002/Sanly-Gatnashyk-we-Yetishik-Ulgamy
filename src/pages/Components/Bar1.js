@@ -37,7 +37,7 @@ const Bar1 =()=>{
         const [open , setOpen]= useState(true);
         return(
             <section className="flex gap-6">
-              <div className={`bg-[#FFFFFF] min-h-screen ${open? "w-16" : "w-72"} duration-500 text-gray-80 px-3`} id="absolute">
+              <div style={{zIndex:'4'}} className={`bg-[#FFFFFF] min-h-screen ${open? "w-16" : "w-72"} duration-500 text-gray-80 px-3`} id="absolute">
                  <div className="py-3 flex justify-end">
                     <HiMenuAlt3 size={26} className="cursor-pointer" onClick={()=> setOpen(!open)}/>
                  </div>
@@ -192,7 +192,7 @@ const Bar1 =()=>{
                                  <h5 
                                  style={{transitionDelay:`${1+2}00ms`}}
                                  className={`whitespace-pre duration-500 
-                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Yollanma 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Tassyklamak 
                                  </h5>
                               </Link>
                              </button>
@@ -202,9 +202,45 @@ const Bar1 =()=>{
                         <Link className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
                                  <div>{React.createElement(GiTeacher, {size:"20"})}</div>
                                  <h5 
+                                 style={{transitionDelay:`${1+3}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Bergili 
+                                 </h5>
+                        </Link>
+                        </button>
+                     </li>
+                     <li className="menu-item">
+                        <button>
+                        <Link to="/Mudir/Zurnal" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${1+4}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Zurnal 
+                                 </h5>
+                        </Link>
+                        </button>
+                     </li>
+                     <li className="menu-item">
+                        <button>
+                        <Link to="/Mudir/Duydurysh" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${1+3}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Duydurysh 
+                                 </h5>
+                        </Link>
+                        </button>
+                     </li>
+                     <li className="menu-item">
+                        <button>
+                        <Link className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
                                  style={{transitionDelay:`${1+2}00ms`}}
                                  className={`whitespace-pre duration-500 
-                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Auditoriya 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Temmiler 
                                  </h5>
                         </Link>
                         </button>
