@@ -21,62 +21,63 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
-import DuyduryshBaha from './DuyduryshBaha';
+import ButtonGroups from './ButtonGroups'
+import { red } from '@mui/material/colors';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ButtonClick from './ButtonClick';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import Button from 'react-bootstrap/Button';
 
-function createData(name,Topar,Dersi, Mugallym,Sene,Yagday, Kafedra, Gornushi,) {
+
+function createData(TalybynAdy, Dersi,Mugallymy,Topary,Gornushi) {
   return {
-    name,
-    Topar,
+    TalybynAdy,
     Dersi,
-    Mugallym,
-    Sene,
-    Yagday,
-    Kafedra,
-    Gornushi,  
+    Mugallymy,
+    Topary,
+    Gornushi   
   };
 }
 
 const rows = [
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022', 'Aldy','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Almady', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Yapdy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022','Yapdy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022', 'Aldy','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Aldy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022','Aldy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Aldy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022','Aldy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Aldy','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Aldy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022','Aldy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Yapdy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022', 'Almady','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022','Almady', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Almady', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022','Aldy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Aldy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Yapdy','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022', 'Almady','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Almady','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Aldy','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022', 'Yapdy','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Almady', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022','Aldy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Yapdy','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Almady','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022', 'Aldy','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Almady', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Aldy','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
-  createData('Zafarow Umitjan', 3321, 'Network', 'S.Caryyew', '12.12.2022','Yapdy', 'Emeli aň we Kiberhowpsyzlyk kafedrasy', 'gatnashyk', ),
-  createData('Zafarow Umitjan', 3321, 'Database', 'S.Caryyew', '05.12.2022','Almady','Emeli aň we Kiberhowpsyzlyk kafedrasy', 'yetishik', ),
- 
-]
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3131','Yetishik'),
+  createData('Zafarow Umitjan','Network','Ilmurat Gummyyew','3141','Gatnashyk'),
+  createData('Zafarow Umitjan','database','Rasulow Arslan','3121','Gatnashyk'),
+];
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -108,72 +109,44 @@ function stableSort(array, comparator) {
   return stabilizedThis.map((el) => el[0]);
 }
 
-const Toparlar = [
-    '3321',
-    '3333',
-    '5642',
-    '1232',  
-  ];
-const Yagdayy = [
-    'Yollanma Alan',
-    'Yolanma Almadyk',
-    'Yolanma Yapan',   
-  ];
-
-  const Gornushi = [
-    'Gatnashyk',
-    'Yetishik',    
-  ];
-
 const headCells = [
-  {
-    id: 'name',
-    numeric: false,
-    disablePadding: true,
-    label: 'Name',
-  },
-  {
-    id: 'Topar',
-    numeric: true,
-    disablePadding: false,
-    label: 'Topar',
-  },
-  {
-    id: 'Dersi',
-    numeric: true,
-    disablePadding: false,
-    label: 'Dersi',
-  },
-  {
-    id: 'Mugallym',
-    numeric: true,
-    disablePadding: false,
-    label: 'Mugallym',
-  },
-  {
-    id: 'Sene',
-    numeric: true,
-    disablePadding: false,
-    label: 'Sene',
-  },
-  {
-    id: 'Yagday',
-    numeric: true,
-    disablePadding: false,
-    label: 'Yagday',
-  },
-  {
-    id: 'Kafedra',
-    numeric: true,
-    disablePadding: false,
-    label: 'Kafedra',
-  },
-  {
-    id: 'Gornushi',
-    numeric: true,
-    disablePadding: false,
-    label: 'Gornushi',
-  },            
+    {
+        id: 'TalybynAdy',
+        numeric: false,
+        disablePadding: true,
+        label: 'Talybyn Ady',
+      },
+     
+      {
+        id: 'Dersi',
+        numeric: true,
+        disablePadding: false,
+        label: 'Dersi',
+      },
+      {
+        id: 'Mugallymy',
+        numeric: true,
+        disablePadding: false,
+        label: 'Mugallymy',
+      }, 
+      {
+        id: 'Topary',
+        numeric: true,
+        disablePadding: false,
+        label: 'Topary',
+      }, 
+      {
+        id: 'Gornushi',
+        numeric: true,
+        disablePadding: false,
+        label: 'Gornushi',
+      },
+      {
+        id: 'Tassyklamak',
+        numeric: true,
+        disablePadding: false,
+        label: 'Tassyklamak',
+      },          
 ];
 
 function EnhancedTableHead(props) {
@@ -185,24 +158,10 @@ function EnhancedTableHead(props) {
 
   return (
     <TableBody>
-      <TableRow className="bg-[#F8F8FA] flex-row flex-column">
-         <TableCell align="center" colSpan={3}>
-            <h5>Toparyn Gatnashyk Zurnaly</h5>
-         </TableCell>
-         <TableCell align="left" colSpan={2}>
-            <ButtonClick lists={Toparlar}/>            
-        </TableCell>
-        <TableCell align="left" colSpan={1}>
-            <ButtonClick lists={Yagdayy}/>            
-        </TableCell>
-        <TableCell align="left" colSpan={1}>
-            <ButtonClick lists={Gornushi}/>            
-        </TableCell>
-        <TableCell align="left" colSpan={2}>
-          <Stack spacing={2} direction="row">
-             <Button variant="contained">Gorkezmek</Button>
-          </Stack>           
-        </TableCell>
+        <TableRow className="bg-[#F8F8FA] flex-row flex-column">
+         <TableCell align="center" colSpan={6}>
+            <h5>Mudir Tassyklamak</h5>
+         </TableCell>         
       </TableRow>     
       <TableRow className="bg-[#F8F8FA] flex-row flex-column">
         {headCells.map((headCell) => (
@@ -295,9 +254,9 @@ EnhancedTableHead.propTypes = {
 //   numSelected: PropTypes.number.isRequired,
 // };
 
-export default function HalypaGatnashyk1() {
+export default function MudirTassyklamak() {
   const [order, setOrder] = React.useState('asc');
-  const [orderBy, setOrderBy] = React.useState('Topar');
+  const [orderBy, setOrderBy] = React.useState('Dersi');
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
@@ -359,7 +318,6 @@ export default function HalypaGatnashyk1() {
 
   return (
     <div className="container">
-    <div >
     <Box sx={{ width: '100%', marginTop:5}}>
       <Paper sx={{ width: '100%', mb: 2 }}>
         {/* <EnhancedTableToolbar numSelected={selected.length} /> */}
@@ -378,7 +336,6 @@ export default function HalypaGatnashyk1() {
               rowCount={rows.length}
             />
             <TableBody>
-                           
               {/* if you don't need to support IE11, you can replace the `stableSort` call with:
                  rows.sort(getComparator(order, orderBy)).slice() */}
               {stableSort(rows, getComparator(order, orderBy))
@@ -388,8 +345,7 @@ export default function HalypaGatnashyk1() {
                   const labelId = `enhanced-table-checkbox-${index}`;
 
                   return (
-                    
-                     <TableRow
+                    <TableRow
                       hover
                       // onClick={(event) => handleClick(event, row.name)}
                       // role="checkbox"
@@ -406,15 +362,15 @@ export default function HalypaGatnashyk1() {
                         padding="none"
                         style={{paddingLeft:20}}
                       >
-                        {row.name}
+                        {row.TalybynAdy}
                       </TableCell>
-                      <TableCell align="center">{row.Topar}</TableCell>
-                      <TableCell align="center">{row.Dersi}</TableCell>
-                      <TableCell align="center">{row.Mugallym}</TableCell>
-                      <TableCell align="center">{row.Sene}</TableCell>
-                      <TableCell align="center">{row.Yagday}</TableCell>
-                      <TableCell align="center">{row.Kafedra}</TableCell>
-                      <TableCell align="center">{row.Gornushi}</TableCell>                      
+                      <TableCell align="center">{row.Dersi}</TableCell> 
+                      <TableCell align="center">{row.Mugallymy}</TableCell> 
+                      <TableCell align="center">{row.Topary}</TableCell> 
+                      <TableCell align="center">{row.Gornushi}</TableCell>                              
+                      <TableCell align="center">
+                        <Button variant="primary"  style={{height:30}}>Tassyklamak</Button>{' '}
+                      </TableCell>                     
                   </TableRow>
                   );
                 })}
@@ -445,7 +401,6 @@ export default function HalypaGatnashyk1() {
         label="Dense padding"
       />
     </Box>
-    </div>    
     </div>
   );
 }

@@ -15,7 +15,7 @@ class Gatnashyk extends React.Component {
          this.callAPI();
     }
     callAPI(){
-        fetch('http://192.168.12.206:8000/gelmedi/').then((response)=> response.json()
+        fetch('http://192.168.12.91:8000/gelmedi/').then((response)=> response.json()
         ).then((gelmedi)=>{
            
             console.log(gelmedi)

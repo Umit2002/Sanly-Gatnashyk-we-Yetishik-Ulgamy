@@ -10,12 +10,23 @@ import Sidebar from './pages/Components/Sidebar';
 import Synag from'./pages/Components/Synag';
 import HalypaGatnashyk from './pages/Components/HalypaGatnashyk'
 import Zurnal from './pages/Components/Zurnal1'
-
+import MudirBergiler from './pages/Components/MudirBergiler'
 import Duydurysh from './pages/Components/Duydurysh';
 import Temmiler from './pages/Components/Temmiler';
 import HalypaGatnashyk1 from './pages/Components/HalypaGatnashyk1';
 import MudirZuranl from './pages/Components/MudirZurnal';
 import MudirDuydurysh from './pages/Components/MudirDuydurysh';
+import MudirTemmiler from './pages/Components/MudirTemmiler';
+import MudirHasap from './pages/Components/MudirHasap';
+import MudirTassyklamak from './pages/Components/MudirTassyklamak';
+import DekanTassyklamak from './pages/Components/DekanTassyklamak';
+import DekanHasabaAlmak from './pages/Components/DekanHasabaAlmak';
+import DekanTemmiBermek from './pages/Components/DekanTemmiBermek';
+import TalypGoshmak from './pages/Components/TalypGoshmak';
+import ToparGoshmak from './pages/Components/ToparGoshmak';
+import ToparDoretmek from './pages/Components/ToparDoretmek';
+import DersGoshmak from './pages/Components/DersGoshmak'
+import AuditoriyaDoretmek from './pages/Components/AuditoriyaDoretmek'
 class App extends React.Component{
     
 
@@ -29,7 +40,19 @@ class App extends React.Component{
             <Route path='/Halypa/Duydurysh' element={<Duydurysh />} />
             <Route path='/Halypa/Temmiler' element={<Temmiler />} /> 
             <Route path='/Mudir/Zurnal' element={<MudirZuranl />} /> 
-            <Route path='/Mudir/Duydurysh' element={<MudirDuydurysh />} />
+            <Route path='/Mudir/Hasap' element={<MudirHasap />} />
+            <Route path='/Talyp/Goshmak' element={<TalypGoshmak />} />
+            <Route path='/Topar/Goshmak' element={<ToparGoshmak />} />
+            <Route path='/Topar/Doretmek' element={<ToparDoretmek />} />
+            <Route path='/Ders/Goshmak' element={<DersGoshmak />} />
+            <Route path='/Auditoriya/Doretmek' element={<AuditoriyaDoretmek />} />
+            <Route path='/Mudir/Tassyklamak' element={<MudirTassyklamak />} />
+            <Route path='/Dekan/TemmiBermek' element={<DekanTemmiBermek />} />
+            <Route path='/Dekan/Tassyklamak' element={<DekanTassyklamak />} />
+            <Route path='/Dekan/HasabaAlmak' element={<DekanHasabaAlmak />} />
+            <Route path='/Mudir/Duydurysh' element={<MudirDuydurysh />} />\
+            <Route path='/Mudir/Temmiler' element={<MudirTemmiler />} />
+            <Route path='/Mudir/Bergiler' element={<MudirBergiler />} />
             <Route path='/Halypa/Zurnal1' element={<Zurnal />} /> 
             <Route path='/Halypa/Gatnashyk1' element={<HalypaGatnashyk1 />} /> 
             <Route path='/Halypa/Gatnashyk' element={<HalypaGatnashyk />} /> 

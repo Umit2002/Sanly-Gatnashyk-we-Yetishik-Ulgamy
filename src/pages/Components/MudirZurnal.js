@@ -25,6 +25,7 @@ import DuyduryshBaha from './DuyduryshBaha';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import ButtonGroups from './ButtonGroups';
 function createData(name,Topar,Ders1, Ders2,Ders3,Ders4,Ders5,Ders6,Ders7,) {
   return {
     name,
@@ -163,6 +164,26 @@ const headCells = [
     label: 'Ders-7',
   },            
 ];
+const Toparlar=
+  [
+    {
+      id:1,
+      labele:'3311'
+    },
+    {
+      id:2,
+      labele:'3321'
+    },
+    {
+      id:3,
+      labele:'3322'
+    },
+    {
+      id:4,
+      labele:'3332'
+    },
+
+  ]
 
 function EnhancedTableHead(props) {
   const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
@@ -176,6 +197,9 @@ function EnhancedTableHead(props) {
       <TableRow className="bg-[#F8F8FA] flex-row flex-column">
          <TableCell align="center" colSpan={6}>
             <h5>Toparyn Yetishik Zurnaly</h5>
+         </TableCell>
+         <TableCell align="center">
+            <ButtonGroups Groups={Toparlar} />
          </TableCell>
          <TableCell align="center" colSpan={6}>
            <ButtonGroup>

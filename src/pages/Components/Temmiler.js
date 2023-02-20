@@ -22,7 +22,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import { red } from '@mui/material/colors';
-
+import ButtonGroups from './ButtonGroups';
 function createData(name, Topar, Sene, Sebabi, Gornushi) {
   return {
     name,
@@ -120,6 +120,26 @@ const headCells = [
     label: 'Gornushi',
   },  
 ];
+const Toparlar=
+  [
+    {
+      id:1,
+      labele:'3311'
+    },
+    {
+      id:2,
+      labele:'3321'
+    },
+    {
+      id:3,
+      labele:'3322'
+    },
+    {
+      id:4,
+      labele:'3332'
+    },
+
+  ];
 
 function EnhancedTableHead(props) {
   const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
@@ -130,6 +150,14 @@ function EnhancedTableHead(props) {
 
   return (
     <TableBody>
+       <TableRow className="bg-[#F8F8FA] flex-row flex-column">
+         <TableCell align="center" colSpan={3}>
+            <h5>Temmi Alan Talyplar</h5>
+         </TableCell>
+         <TableCell align="center" colSpan={3}>
+            <ButtonGroups Groups={Toparlar} />
+         </TableCell>        
+      </TableRow>     
       <TableRow className="bg-[#F8F8FA] flex-row flex-column">
         {headCells.map((headCell) => (
           <TableCell

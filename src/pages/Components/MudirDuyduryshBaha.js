@@ -22,7 +22,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import { red } from '@mui/material/colors';
-
+import ButtonGroups from './ButtonGroups';
+import ButtonClick from './ButtonClick';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 function createData(name, Ders, Topar,Sentiyabr, Oktiyabr,Wiza,WizaPerezdaca,Noyabr,Dekabr,Final,FinalPerezdaca) {
   return {
     name,
@@ -169,6 +172,12 @@ const headCells = [
   }, 
     
 ];
+const Toparlar = [
+  '3321',
+  '3333',
+  '5642',
+  '1232',  
+];
 
 function EnhancedTableHead(props) {
   const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
@@ -179,6 +188,19 @@ function EnhancedTableHead(props) {
 
   return (
     <TableBody>
+       <TableRow className="bg-[#F8F8FA] flex-row flex-column">
+         <TableCell align="center" colSpan={5}>
+            <h5>Temmiler Baha</h5>
+         </TableCell>
+         <TableCell align="right" colSpan={3}>
+            <ButtonClick lists={Toparlar}/>            
+        </TableCell> 
+        <TableCell align="left" colSpan={3}>
+          <Stack spacing={2} direction="row">
+             <Button variant="contained">Gorkezmek</Button>
+          </Stack>           
+        </TableCell>      
+      </TableRow>      
       <TableRow className="bg-[#F8F8FA] flex-row flex-column">
         {headCells.map((headCell) => (
           <TableCell

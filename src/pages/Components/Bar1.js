@@ -30,9 +30,13 @@ const Bar1 =()=>{
          setOpenDec(!openDec);
          };
 
-         const [openSec, setOpenSec] = React.useState(false);
-         const handleOpenSec = () => {
-         setOpenSec(!openSec);
+         const [openTal, setOpenTal] = React.useState(false);
+         const handleOpenTal = () => {
+         setOpenTal(!openTal);
+         };
+         const [openAud, setOpenAud] = React.useState(false);
+         const handleOpenAud = () => {
+         setOpenAud(!openAud);
          };
         const [open , setOpen]= useState(true);
         return(
@@ -187,7 +191,8 @@ const Bar1 =()=>{
                      <ul className="menu">
                      <li className="menu-item">
                               <button >
-                              <Link className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                              <Link to="/Mudir/Tassyklamak" 
+                               className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
                                  <div>{React.createElement(GiTeacher, {size:"20"})}</div>
                                  <h5 
                                  style={{transitionDelay:`${1+2}00ms`}}
@@ -199,12 +204,26 @@ const Bar1 =()=>{
                      </li>
                      <li className="menu-item">
                         <button>
-                        <Link className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                        <Link  to="/Mudir/Bergiler"
+                            className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
                                  <div>{React.createElement(GiTeacher, {size:"20"})}</div>
                                  <h5 
                                  style={{transitionDelay:`${1+3}00ms`}}
                                  className={`whitespace-pre duration-500 
                                  ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Bergili 
+                                 </h5>
+                        </Link>
+                        </button>
+                     </li>
+                     <li className="menu-item">
+                        <button>
+                        <Link  to="/Mudir/Hasap"
+                            className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${1+3}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Hasaba Alnan 
                                  </h5>
                         </Link>
                         </button>
@@ -235,7 +254,7 @@ const Bar1 =()=>{
                      </li>
                      <li className="menu-item">
                         <button>
-                        <Link className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                        <Link to="/Mudir/Temmiler" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
                                  <div>{React.createElement(GiTeacher, {size:"20"})}</div>
                                  <h5 
                                  style={{transitionDelay:`${1+2}00ms`}}
@@ -245,6 +264,7 @@ const Bar1 =()=>{
                         </Link>
                         </button>
                      </li>
+
                      </ul>
                   ) : null}      
               </div>
@@ -264,42 +284,127 @@ const Bar1 =()=>{
                      <ul className="menu">
                      <li className="menu-item">
                               <button >
-                              <Link className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                              <Link  to="/Dekan/Tassyklamak"  className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
                                  <div>{React.createElement(GiTeacher, {size:"20"})}</div>
                                  <h5 
                                  style={{transitionDelay:`${7+2}00ms`}}
                                  className={`whitespace-pre duration-500 
-                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Yollanma 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Tassyklamak 
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link  to="/Dekan/HasabaAlmak" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${7+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Hasaba Almak 
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link to="/Mudir/Zurnal"  className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${7+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Zurnal
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link to="/Mudir/Duydurysh" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${7+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Duydurysh
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link to="/Mudir/Temmiler" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${7+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Temmiler
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link to="/Dekan/TemmiBermek" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${7+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Temmi Bermek
                                  </h5>
                               </Link>
                              </button>
                      </li>
                      </ul>
-                  ) : null}      
+                  ) : null}
+                        
               </div>
 
               <div className="dropdown mt-4 flex flex-col gap-4 relative">
-                <button onClick={handleOpenSec}>
+                <button onClick={handleOpenTal}>
                               <Link className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
                                     <div>{React.createElement(GiTeacher, {size:"20"})}</div>
                                     <h4 
                                     style={{transitionDelay:`${5+2}00ms`}}
                                     className={`whitespace-pre duration-500 
-                                    ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Katip 
+                                    ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Topar 
                                     </h4>
                              </Link>
                </button>
                      
-                  {openSec ? (
+                  {openTal ? (
                      <ul className="menu">
-                     <li className="menu-item">
+                        <li className="menu-item">
                               <button >
-                              <Link className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                              <Link to="/Talyp/Goshmak" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
                                  <div>{React.createElement(GiTeacher, {size:"20"})}</div>
                                  <h5 
                                  style={{transitionDelay:`${10+2}00ms`}}
                                  className={`whitespace-pre duration-500 
-                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Topar doretmek 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Talyp Goshmak 
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link to="/Topar/Goshmak" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${10+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Topar Goshmak 
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link to="/Topar/Doretmek" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${10+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Topar Doretmek 
                                  </h5>
                               </Link>
                              </button>
@@ -307,7 +412,47 @@ const Bar1 =()=>{
                      </ul>
                   ) : null}      
               </div>
-              
+              <div className="dropdown mt-4 flex flex-col gap-4 relative">
+                <button onClick={handleOpenAud}>
+                              <Link className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                    <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                    <h4 
+                                    style={{transitionDelay:`${5+2}00ms`}}
+                                    className={`whitespace-pre duration-500 
+                                    ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Auditoriya 
+                                    </h4>
+                             </Link>
+               </button>
+                     
+                  {openAud ? (
+                     <ul className="menu">
+                        <li className="menu-item">
+                              <button >
+                              <Link to="/Ders/Goshmak" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${10+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Ders Goshmak 
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     <li className="menu-item">
+                              <button >
+                              <Link to="/Auditoriya/Doretmek" className={'group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-100 rounded-md'}>
+                                 <div>{React.createElement(GiTeacher, {size:"20"})}</div>
+                                 <h5 
+                                 style={{transitionDelay:`${10+2}00ms`}}
+                                 className={`whitespace-pre duration-500 
+                                 ${open && "opacity-0 translate-x-28 overflow-hidden"}`}>Auditoriya Doretmek 
+                                 </h5>
+                              </Link>
+                             </button>
+                     </li>
+                     </ul>
+                  ) : null}      
+              </div>
               </div>
               
             </section>
